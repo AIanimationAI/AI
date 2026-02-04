@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 3 – Анимация и движение</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+
+    /* Тёмный режим */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b3ff; }
+    body.dark p { color: #d0d0d0; }
+    body.dark details { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark details[open] { background: #25395a; }
+    body.dark .example { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark a { color: #ffae62; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active { background: #004f7c; color: #fff; }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+    body.dark .image img { filter: brightness(0.9); }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_ru.html">Домой</a>
+      <a href="lesson1_ru.html">Урок 1</a>
+      <a href="lesson2_ru.html">Урок 2</a>
+      <a href="lesson3_ru.html" class="active">Урок 3</a>
+      <a href="lesson4_ru.html">Урок 4</a>
+      <a href="lesson5_ru.html">Урок 5</a>
+      <a href="lesson6_ru.html">Урок 6</a>
+    </div>
+    <div class="lang">
+      <a href="../en/lesson3_en.html">EN</a> |
+      <a href="lesson3_ru.html">RU</a> |
+      <a href="../he/lesson3_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Темная тема</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Урок 3: Анимация и движение</h1>
+    <p>Оживите свои изображения. Узнайте, как анимировать персонажей, делать плавные переходы и управлять камерой.</p>
+    <img src="../images/motion.png" alt="Иконка движения" class="robot">
+  </header>
+  <div class="container">
+    <h2>3.1 Завершение раскадровки</h2>
+    <p>Перед анимацией убедитесь, что раскадровка завершена. Проверьте последовательность событий и откорректируйте кадры, которые смотрятся неудачно. Исправить рисунок легче, чем готовый ролик!</p>
+    <h2>3.2 Оживление персонажей</h2>
+    <p>Чтобы оживить сцены, используйте AI‑модели, такие как Grok или Kling. Эти инструменты превращают статичное изображение в движущееся — заставляют персонажей моргать, ходить или летать【359591517461072†L221-L285】【805035439567289†L154-L160】.</p>
+    <div class="image">
+      <img src="../images/motion_example.png" alt="Диаграмма движения">
+      <p><em>Рис. 1. От статичного кадра к динамике: начните с неподвижного изображения, затем добавляйте движение и переходы.</em></p>
+    </div>
+    <details>
+      <summary>Советы для естественного движения</summary>
+      <ul>
+        <li>Держите движения простыми: моргания, лёгкие повороты и жесты.</li>
+        <li>Используйте циклы: небольшие повторяющиеся движения (например, взмах крыльев) создают реалистичность.</li>
+        <li>Помните о физике: тяжёлые объекты движутся медленнее и имеют инерцию.</li>
+      </ul>
+    </details>
+    <h2>3.3 Переходы и движение камеры</h2>
+    <p>Хороший монтаж помогает следить за сюжетом. Используйте переходы, чтобы связать сцены:</p>
+    <ul>
+      <li><strong>Срез:</strong> моментальная смена между сценами создаёт динамику.</li>
+      <li><strong>Растворение:</strong> плавное перетекание одной сцены в другую.</li>
+      <li><strong>Панорама и зум:</strong> движение «камеры» влево, вправо или приближение, чтобы привлечь внимание.</li>
+      <li><strong>Слайд:</strong> новое изображение наезжает на старое, создавая ощущение перемещения.</li>
+    </ul>
+    <details>
+      <summary>Пример движения камеры</summary>
+      <p>Представьте, как Люси запускает летательную машину. Начните с общего плана мастерской. Затем плавно поднимите камеру вверх и следуйте за ней в небо. Приблизьте лицо, чтобы передать её решимость. Такие приёмы добавляют драматизма и удерживают внимание зрителя.</p>
+    </details>
+    <h2>3.4 Апскейл и улучшения</h2>
+    <p>AI‑инструменты могут улучшить качество изображений перед анимацией. Используйте функции увеличения разрешения или улучшения в Canva или CapCut, чтобы сделать кадры чётче. Помните, идеальное качество не главное. Сосредоточьтесь на сюжете и исправляйте картинку только при необходимости.</p>
+    <h2>3.5 Подготовка клипов для монтажа</h2>
+    <p>Экспортируйте анимированные сцены в коротких видеороликах. Переименуйте их по порядку (например, scene01.mp4, scene02.mp4) и храните в одной папке. В следующем уроке вы добавите голос и эффекты.</p>
+    <h2>3.6 Задание</h2>
+    <ol>
+      <li>Анимируйте каждый кадр вашей раскадровки, начиная с простых движений.</li>
+      <li>Добавьте хотя бы один переход между сценами (срез, растворение или слайд).</li>
+      <li>Экспортируйте клипы и организуйте их для следующего шага.</li>
+    </ol>
+    <p>Молодцы! Ваша история оживает на экране.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI‑анимация 14+</p>
+    <p>Ресурсы: скачивайте изображения на <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+</footer>
+  <!-- Скрипт для переключения темы -->
+  <script>
+    const toggleBtnRU3 = document.getElementById('themeToggle');
+    const prefersDarkRU3 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDarkRU3) {
+      document.body.classList.add('dark');
+      if (toggleBtnRU3) toggleBtnRU3.textContent = 'Светлая тема';
+    }
+    if (toggleBtnRU3) {
+      toggleBtnRU3.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtnRU3.textContent = document.body.classList.contains('dark') ? 'Светлая тема' : 'Темная тема';
+      });
+    }
+  </script>
+</body>
+</html>

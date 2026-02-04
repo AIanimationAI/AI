@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 – Introduction to AI Animation</title>
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f5f8fc;
+      color: #333;
+      line-height: 1.6;
+    }
+    a { color: #ff8c42; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.95);
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .tabs a {
+      margin-right: 15px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      color: #004f7c;
+      font-weight: 600;
+    }
+    nav .tabs a.active {
+      background: #007acc;
+      color: #fff;
+    }
+    nav .lang a {
+      margin-left: 10px;
+      color: #007acc;
+      font-weight: bold;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%);
+      color: #fff;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.1rem;
+      max-width: 600px;
+    }
+    header img.robot {
+      position: absolute;
+      bottom: -10px;
+      right: 20px;
+      width: 200px;
+    }
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+    h2 {
+      color: #007acc;
+      margin-top: 30px;
+      font-size: 1.8rem;
+    }
+    h3 {
+      color: #007acc;
+      margin-top: 25px;
+      font-size: 1.4rem;
+    }
+    .image {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .image img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .image caption {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .example {
+      background: #eef6fc;
+      border-left: 4px solid #007acc;
+      padding: 15px 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    /* Accordion */
+    details {
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      margin: 15px 0;
+      padding: 15px 20px;
+    }
+    details summary {
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+      color: #007acc;
+    }
+    details[open] {
+      background: #f0f7ff;
+    }
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    footer {
+      margin-top: 60px;
+      padding: 20px 0;
+      background: #007acc;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Dark mode overrides */
+    body.dark {
+      background-color: #121212;
+      color: #e5e5e5;
+    }
+    body.dark nav {
+      background: rgba(20,20,20,0.95);
+    }
+    body.dark header {
+      background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%);
+      color: #e5e5e5;
+    }
+    body.dark h1, body.dark h2, body.dark h3 {
+      color: #66b3ff;
+    }
+    body.dark p { color: #d0d0d0; }
+    body.dark .example {
+      background: #17223b;
+      border-left-color: #66b3ff;
+    }
+    body.dark .lesson-box, body.dark details {
+      background: #1f2b3a;
+      border: 1px solid #2c3e55;
+      color: #e5e5e5;
+    }
+    body.dark .lesson-box h3 {
+      color: #66b3ff;
+    }
+    body.dark .lesson-box a, body.dark a {
+      color: #ffae62;
+    }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active {
+      background: #004f7c;
+      color: #fff;
+    }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle {
+      border-color: #66b3ff;
+      color: #66b3ff;
+    }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="tabs">
+      <a href="../index_en.html">Home</a>
+      <a href="lesson1_en.html" class="active">Lesson 1</a>
+      <a href="lesson2_en.html">Lesson 2</a>
+      <a href="lesson3_en.html">Lesson 3</a>
+      <a href="lesson4_en.html">Lesson 4</a>
+      <a href="lesson5_en.html">Lesson 5</a>
+      <a href="lesson6_en.html">Lesson 6</a>
+    </div>
+    <div class="lang">
+      <a href="lesson1_en.html">EN</a> |
+      <a href="../ru/lesson1_ru.html">RU</a> |
+      <a href="../he/lesson1_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Dark Mode</button>
+    </div>
+  </nav>
+  <!-- Header -->
+  <header>
+    <h1>Lesson 1: Introduction to AI &amp; Animation</h1>
+    <p>Discover how AI can help you create vibrant animations and why every great film starts with a simple story.</p>
+    <img src="../images/robot_example.png" alt="Robot mascot" class="robot">
+  </header>
+  <!-- Main content -->
+  <div class="container">
+    <h2>1.1 Understanding AI Animation</h2>
+    <p>Artificial intelligence is changing the way we create cartoons and films. Instead of drawing every frame by hand, you can use AI tools to generate characters, backgrounds and even whole scenes from text descriptions. This lets you focus on what matters most: <strong>storytelling</strong> and <strong>creativity</strong>.</p>
+    <p>For example, the first AI‑generated cartoon followed a little locomotive named Tino. The creators didn’t start with fancy software — they brainstormed a story and characters, then wrote detailed prompts to generate the images【360697135777347†L28-L44】. Here is what one of their prompts looked like:</p>
+    <div class="example">
+      <pre>A cute, colorful little train named Tino is at a small, charming station, illustrated in a vibrant 2D cartoon style. He has expressive, oversized eyes and a big smile. Friendly cartoon animals like rabbits and birds wave goodbye. The sun is shining in a clear blue sky with whimsical flowers blooming along the tracks.【360697135777347†L40-L50】</pre>
+    </div>
+    <p>Notice how the prompt describes the subject (Tino the train), the environment (a station with animals and flowers) and the style (vibrant 2D). Such detail helps the AI understand what you want to see. Once the images were ready, the team animated them into short clips and assembled the scenes into a story. Music was added last to set the emotional tone【360697135777347†L52-L78】.</p>
+    <div class="image">
+      <img src="../images/storyboard_example.png" alt="Storyboard example">
+      <caption><em>Figure 1. A simple storyboard sketch helps plan your story before you generate any images.</em></caption>
+    </div>
+    <h2>1.2 Why Story Comes First</h2>
+    <p>Even with powerful tools, animation begins with an idea. Ask yourself: Who is my protagonist? Where does the action take place? What happens first, next and last? A <strong>storyboard</strong> is a series of panels that outline your plot visually. It helps you organize your thoughts and plan each shot.</p>
+    <details>
+      <summary>How to Create a Storyboard</summary>
+      <p>Start with a blank sheet of paper and draw boxes for each scene. In each box, sketch the main action and write a sentence describing what’s happening. You don’t need to be an artist — stick figures are fine! The goal is to map out the flow of your story before you generate images.</p>
+    </details>
+    <h2>1.3 Writing Effective Prompts</h2>
+    <p>Prompts are the instructions you give an AI image generator. Good prompts usually include three parts:</p>
+    <ul>
+      <li><strong>Subject:</strong> Who or what is the focus? (e.g., “a brave cat”, “a futuristic city”)</li>
+      <li><strong>Context:</strong> Where is it happening? What’s the environment? (e.g., “inside a floating spaceship”, “on a sunny beach”)</li>
+      <li><strong>Style &amp; Mood:</strong> How should it look and feel? (e.g., “in the style of a hand‑drawn cartoon”, “bright and cheerful”)</li>
+    </ul>
+    <p>Here is a comparison between a vague and a descriptive prompt:</p>
+    <div class="example">
+      <strong>Vague prompt:</strong>
+      <pre>A boy rides a bike.</pre>
+      <strong>Descriptive prompt:</strong>
+      <pre>A smiling teenage boy wearing a red hoodie rides a blue bicycle down a tree‑lined street on a sunny spring morning, illustrated in a vibrant anime style.</pre>
+    </div>
+    <details>
+      <summary>Tips for Great Prompts</summary>
+      <ul>
+        <li>Be specific about colors, emotions and actions.</li>
+        <li>Mention any props or background elements that are important to the scene.</li>
+        <li>Specify the art style (cartoon, anime, watercolor, 3D) and mood (cheerful, mysterious, dramatic).</li>
+      </ul>
+    </details>
+    <h2>1.4 Your First Assignment</h2>
+    <p>Ready to begin? Follow these steps:</p>
+    <ol>
+      <li>Write a short story idea in one paragraph. Introduce the main character, the setting and the conflict.</li>
+      <li>Create a storyboard with 4–6 panels. Sketch each scene and jot down what happens.</li>
+      <li>Write a descriptive prompt for each panel using the guidelines above. Include subject, context, style and mood.</li>
+    </ol>
+    <h2>1.5 Tools Introduced</h2>
+    <ul>
+      <li><strong>Gemini:</strong> A multimodal AI that can generate text, images, audio and video【289038682162511†L142-L166】.</li>
+      <li><strong>Grok:</strong> A model that brings still images to life with cinematic motion【359591517461072†L221-L285】.</li>
+      <li><strong>ElevenLabs:</strong> A text‑to‑speech system with expressive voices and emotion control【264971743013503†L24-L65】.</li>
+      <li><strong>Suno:</strong> A music generator that lets you create songs or instrumentals for your videos【47503203825247†L177-L197】.</li>
+      <li><strong>CapCut:</strong> A video editor with AI features like auto‑captions and background removal【598944673568178†L130-L176】.</li>
+      <li><strong>Canva:</strong> A design tool with AI image and video generation features【553704467683165†L69-L131】.</li>
+      <li><strong>Nano Banana &amp; Kling:</strong> Advanced tools for smooth animations and consistent characters【902543645726787†L347-L397】【805035439567289†L154-L160】.</li>
+    </ul>
+    <p>In the next lesson you’ll learn how to turn your story into a series of detailed prompts and storyboards. Keep your imagination alive!</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI Animation 14+</p>
+    <p>Resources: get free images at <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggleBtn1 = document.getElementById('themeToggle');
+    const prefersDark1 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark1) {
+      document.body.classList.add('dark');
+      if (toggleBtn1) toggleBtn1.textContent = 'Light Mode';
+    }
+    if (toggleBtn1) {
+      toggleBtn1.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtn1.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+      });
+    }
+  </script>
+</body>
+</html>

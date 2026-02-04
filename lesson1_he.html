@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שיעור 1 – מבוא לבינה מלאכותית ואנימציה</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f9fbfd; color: #333; direction: rtl; text-align: right; }
+    nav { background: #007acc; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    nav .links a { color: #fff; text-decoration: none; margin-left: 15px; font-weight: bold; }
+    nav .links a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); color: #fff; padding: 30px 20px; text-align: center; border-radius: 0 0 10px 10px; }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin-top: 10px; font-size: 1.1rem; }
+    .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
+    h2 { color: #007acc; }
+    .image { text-align: center; margin: 20px 0; }
+    .image img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    .example { background: #eef6fc; border-right: 4px solid #007acc; padding: 15px 20px; margin: 20px 0; border-radius: 5px; text-align: right; }
+    pre { background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    ul { list-style: disc; padding-right: 20px; }
+    footer { margin-top: 60px; padding: 20px; background: #007acc; color: #fff; text-align: center; }
+    /* Dark mode overrides */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: #1d2d50; }
+    body.dark nav .links a,
+    body.dark nav .lang-switch a { color: #66b3ff; }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2 { color: #66b3ff; }
+    body.dark .example { background: #243654; border-right-color: #66b3ff; color: #d0d0d0; }
+    body.dark pre { background: #1f2d3a; }
+    body.dark footer { background: #1d2d50; color: #e5e5e5; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="links">
+      <a href="../index_he.html">דף הבית</a>
+      <a href="lesson1_he.html">שיעור 1</a>
+      <a href="lesson2_he.html">שיעור 2</a>
+      <a href="lesson3_he.html">שיעור 3</a>
+      <a href="lesson4_he.html">שיעור 4</a>
+      <a href="lesson5_he.html">שיעור 5</a>
+      <a href="lesson6_he.html">שיעור 6</a>
+    </div>
+    <div class="lang-switch">
+      <a href="../ru/lesson1_ru.html" style="color:#fff; margin-left:10px;">Русский</a>
+      <a href="../en/lesson1_en.html" style="color:#fff;">English</a>
+      <!-- Theme toggle button for dark/light mode -->
+      <button id="themeToggle" style="margin-right:10px; padding:6px 10px; border:1px solid #fff; border-radius:5px; background:none; color:#fff; font-weight:bold; cursor:pointer;">מצב כהה</button>
+    </div>
+  </nav>
+  <header>
+    <h1>שיעור 1: מבוא לבינה מלאכותית ואנימציה</h1>
+    <p>הכירו את העולם של AI יצירתי וגילוי כיצד סיפורים גדולים מתחילים מרעיון קטן.</p>
+  </header>
+  <div class="container">
+    <h2>1.1 הבנת אנימציה עם בינה מלאכותית</h2>
+    <p>בינה מלאכותית משנה את האופן שבו אנו יוצרים אנימציה. עם כלים כמו AuraAI, Gemini, Grok ואחרים, אתם יכולים להפיק דמויות צבעוניות, רקעים ואפילו סצנות שלמות מתוך תיאורים מילוליים. העיקר שהטכנולוגיה מאפשרת לכם להתמקד בסיפור וביצירתיות, בלי צורך בכישורי ציור מתקדמים【360697135777347†L28-L44】.</p>
+    <p>לדוגמה, הסרט המונפש הראשון של AuraAI עוקב אחרי <em>טינו הרכבת</em>, קטר קטן שחוויותיו נוצרו מרעיון פשוט. הצוות התחיל בסיעור מוחות של סיפור ודמויות, ואז השתמש בפרומפטים תיאוריים ליצירת התמונות【360697135777347†L28-L44】. פרומפט דוגמה נראה כך:</p>
+    <div class="example">
+      <pre>רכבת קטנה וחמודה בשם טינו עומדת בתחנה קטנה ומקסימה, מצוירת בסגנון מצויר צבעוני. לעיניה הגדולות חיוך רחב. חיות חביבות כמו ארנבים וציפורים מנופפות לו לשלום. השמש זורחת בשמיים כחולים ובהירים ופרחים צבעוניים פורחים לצד המסילה.【360697135777347†L40-L50】</pre>
+    </div>
+    <p>פרומפטים מפורטים כאלה עוזרים ל‑AI להבין את הנושא, הסביבה והמוזה שאתם רוצים להשיג. אחרי יצירת התמונות הצוות אנימט אותם לקליפים קצרים וחיבר את הסצנות לסיפור רציף. מוזיקה נוספה בסוף כדי לקבוע את הטון הרגשי【360697135777347†L52-L78】.</p>
+    <div class="image">
+      <img src="../images/robot_example.png" alt="דוגמה לרובוט מצויר שנוצר על ידי AI">
+      <p><em>איור 1. רובוט מצויר שנוצר על ידי AI לצורך השראה.</em></p>
+    </div>
+    <h2>1.2 מדוע הסיפור קודם</h2>
+    <p>גם עם כלים חזקים, אנימציה מתחילה ברעיון ובסיפור. עליכם לדעת מי הדמויות שלכם, היכן הן נמצאות, מה הן רוצות ואילו אתגרים עומדים בפניהם. סטוריבורד (לוח תכנון) עוזר לארגן את המחשבות ולתכנן כל שוט לפני הפקת התמונות. להלן דוגמה לסטוריבורד פשוט:</p>
+    <div class="image">
+      <img src="../images/storyboard_example.png" alt="דוגמה לסטוריבורד עם רישומים פשוטים">
+      <p><em>איור 2. סטוריבורד בן ארבעה פריימים שמציג תחילת הרפתקה.</em></p>
+    </div>
+    <h2>1.3 כתיבת פרומפטים אפקטיביים</h2>
+    <p>פרומפטים הם תיאורים קצרים שמנחים את הבינה המלאכותית מה ליצור. פרומפט טוב כולל שלושה מרכיבים עיקריים:</p>
+    <ul>
+      <li><strong>נושא:</strong> מי או מה במרכז? (לדוגמה, "חתול אמיץ", "עיר עתידנית").</li>
+      <li><strong>הקשר:</strong> היכן זה קורה? מה הסביבה? ("בתוך חללית", "על חוף שטוף שמש").</li>
+      <li><strong>סגנון ומצב רוח:</strong> איך זה אמור להיראות ולהרגיש? ("בסגנון מצויר ידני", "בהיר ושמח").</li>
+    </ul>
+    <p>השתמשו בתארים ברורים והוסיפו פרטים חשובים. הנה השוואה בין פרומפט לא ברור לבין פרומפט תיאורי:</p>
+    <div class="example">
+      <strong>פרומפט לא ברור:</strong>
+      <pre>ילד רוכב על אופניים.</pre>
+      <strong>פרומפט תיאורי:</strong>
+      <pre>ילד מחייך בחולצת קפוצ'ון אדומה רוכב על אופניים כחולים ברחוב מוצל בעצים בבוקר אביבי שטוף שמש, מאויר בסגנון אנימה צבעונית.</pre>
+    </div>
+    <p>הפרומפט השני מספק יותר מידע על הדמות, הסביבה והסגנון, ומכוון את AI לתוצאה מדויקת ונעימה יותר.</p>
+    <h2>1.4 משימה ראשונה</h2>
+    <p>כדי להתאמן, התחילו בכתיבת רעיון פשוט לסיפור. מי הגיבור שלכם? היכן מתרחשת העלילה? מה קורה בתחילה, בהמשך ובסוף? צרו סטוריבורד עם 4–6 פריימים ותארו כל סצנה. לאחר מכן כתבו פרומפט תיאורי לכל פריים לפי ההנחיות לעיל.</p>
+    <h2>1.5 הכלים בשיעור</h2>
+    <p>בשיעור זה אנו מציגים מספר כלי AI. הנה מה שהם עושים:</p>
+    <ul>
+      <li><strong>Gemini</strong>: מודל גנרטיבי מולטי‑מודלי של גוגל שמסוגל להבין וליצור טקסט, אודיו, תמונות וסרטונים【289038682162511†L142-L166】.</li>
+      <li><strong>Grok</strong>: AI שמחייה תמונות סטטיות ומוסיף תנועה קולנועית ושליטה בסגנון【359591517461072†L221-L285】.</li>
+      <li><strong>ElevenLabs</strong>: מערכת לטקסט‑לדיבור עם שליטה באינטונציה, דוברים רבים ותמיכה בעשרות שפות【264971743013503†L24-L65】.</li>
+      <li><strong>Suno</strong>: פלטפורמה ליצירת מוזיקה מטקסט, המאפשרת ליצור שירים או קטעים אינסטרומנטליים【47503203825247†L177-L197】.</li>
+      <li><strong>CapCut</strong>: אפליקציית עריכת וידאו חינמית עם תכונות AI כמו כתוביות אוטומטיות והסרת רקע【598944673568178†L130-L176】.</li>
+      <li><strong>Canva</strong>: כלי עיצוב מקוון עם פונקציות AI ליצירת תמונות וסרטונים, עריכה ואנימציה【553704467683165†L69-L131】.</li>
+      <li><strong>Nano Banana ו‑Kling</strong>: מודלים מתקדמים ליצירת וידאו מתמונות, המפיקים תנועה חלקה ושומרים על עקביות של הדמויות【902543645726787†L347-L397】【805035439567289†L154-L160】.</li>
+    </ul>
+    <p>כשאתם חוקרים את הכלים הללו, זכרו שהטכנולוגיה אמורה לתמוך ביצירתיות שלכם ולא להחליפה. בשיעור הבא נצלול עמוק יותר לפיתוח עלילה וסטוריבורד.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 קורס אנימציה עם AI – שיעור 1</p>
+    <p>משאבים: תמונות בחינם ניתן למצוא ב<a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeButton = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) {
+      document.body.classList.add('dark');
+      if (themeButton) themeButton.textContent = 'מצב בהיר';
+    }
+    if (themeButton) {
+      themeButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeButton.textContent = document.body.classList.contains('dark') ? 'מצב בהיר' : 'מצב כהה';
+      });
+    }
+  </script>
+</body>
+</html>

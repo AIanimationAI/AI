@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 1 – Введение в AI и анимацию</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; direction:ltr; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    .example { background:#eef6fc; border-left:4px solid #007acc; padding:15px 20px; margin:20px 0; border-radius:5px; }
+    pre { background:#f5f5f5; padding:10px; border-radius:4px; overflow-x:auto; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+
+    /* Тёмный режим */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b3ff; }
+    body.dark p { color: #d0d0d0; }
+    body.dark details, body.dark .example { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark details[open] { background: #25395a; }
+    body.dark a { color: #ffae62; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active { background: #004f7c; color: #fff; }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+    body.dark .image img { filter: brightness(0.9); }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_ru.html">Домой</a>
+      <a href="lesson1_ru.html" class="active">Урок 1</a>
+      <a href="lesson2_ru.html">Урок 2</a>
+      <a href="lesson3_ru.html">Урок 3</a>
+      <a href="lesson4_ru.html">Урок 4</a>
+      <a href="lesson5_ru.html">Урок 5</a>
+      <a href="lesson6_ru.html">Урок 6</a>
+    </div>
+    <div class="lang">
+      <a href="../en/lesson1_en.html">EN</a> |
+      <a href="lesson1_ru.html">RU</a> |
+      <a href="../he/lesson1_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Темная тема</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Урок 1: Введение в AI и анимацию</h1>
+    <p>Узнай, как искусственный интеллект помогает создавать яркие мультфильмы и почему любой фильм начинается с идеи.</p>
+    <img src="../images/robot_example.png" alt="Милый робот" class="robot">
+  </header>
+  <div class="container">
+    <h2>1.1 Что такое AI‑анимация?</h2>
+    <p>Искусственный интеллект меняет способ создания мультфильмов и фильмов. Вместо того чтобы рисовать каждый кадр вручную, можно использовать AI‑инструменты для генерации персонажей, фонов и даже целых сцен по текстовому описанию. Это позволяет сосредоточиться на <strong>сюжете</strong> и <strong>творчестве</strong>.</p>
+    <p>Например, первый AI‑мультфильм рассказывал о маленьком локомотиве по имени Тино. Создатели начали не с компьютера, а с придумывания истории и героев. Затем они написали подробные запросы, чтобы сгенерировать изображения【360697135777347†L28-L44】. Вот пример такого запроса:</p>
+    <div class="example">
+      <pre>Милый цветной паровозик по имени Тино стоит на уютной станции, изображённой в ярком 2D‑стиле. У него выразительные большие глаза и широкая улыбка. Дружелюбные зверята — кролики и птицы — машут ему. Солнце светит на голубом небе, а вдоль путей цветут причудливые цветы.【360697135777347†L40-L50】</pre>
+    </div>
+    <p>Обратите внимание, как запрос описывает персонажа (Тино), окружение (станция с животными и цветами) и стиль (яркий мультфильм). Такая детализация помогает AI понять, что вы хотите увидеть. Когда изображения готовы, их оживляют, собирая сцену, а в конце добавляют музыку【360697135777347†L52-L78】.</p>
+    <div class="image">
+      <img src="../images/storyboard_example.png" alt="Пример раскадровки">
+      <p><em>Рис. 1. Простой раскадровочный набросок помогает спланировать историю до генерации изображений.</em></p>
+    </div>
+    <h2>1.2 Почему сначала история</h2>
+    <p>Даже самые мощные инструменты не заменят хорошую идею. Задайте себе вопросы: кто главный герой? где происходит действие? что случается сначала, потом и в конце? <strong>Раскадровка</strong> — это серия кадров, которые визуально рассказывают вашу историю. Она помогает упорядочить мысли и спланировать каждый кадр.</p>
+    <details>
+      <summary>Как сделать раскадровку</summary>
+      <p>Возьмите лист бумаги и нарисуйте несколько коробок для каждой сцены. В каждой коробке набросайте главное действие и подпишите, что происходит. Не нужно быть художником — хватит простых фигурок. Важно увидеть последовательность сцен до генерации изображений.</p>
+    </details>
+    <h2>1.3 Как писать промпты</h2>
+    <p>Промпт — это инструкция, которую вы даёте AI. Хороший промпт обычно состоит из трёх частей:</p>
+    <ul>
+      <li><strong>Объект:</strong> кто или что в центре внимания? (например, «отважный кот», «футуристический город»)</li>
+      <li><strong>Контекст:</strong> где происходит действие? (например, «внутри летающего корабля», «на солнечном пляже»)</li>
+      <li><strong>Стиль и настроение:</strong> как это должно выглядеть и ощущаться? (например, «в стиле рисованного мультфильма», «ярко и радостно»)</li>
+    </ul>
+    <p>Сравнение простого и подробного запроса:</p>
+    <div class="example">
+      <strong>Слабый запрос:</strong>
+      <pre>Мальчик едет на велосипеде.</pre>
+      <strong>Подробный запрос:</strong>
+      <pre>Улыбающийся подросток в красном худи едет на синем велосипеде по аллее, окружённой деревьями, в солнечное весеннее утро, в ярком аниме‑стиле.</pre>
+    </div>
+    <details>
+      <summary>Советы для отличных запросов</summary>
+      <ul>
+        <li>Будьте конкретны в описании цветов, эмоций и действий.</li>
+        <li>Укажите реквизит и важные элементы фона.</li>
+        <li>Назовите стиль изображения (мультфильм, аниме, акварель, 3D) и настроение (весёлое, таинственное, драматичное).</li>
+      </ul>
+    </details>
+    <h2>1.4 Первое задание</h2>
+    <ol>
+      <li>Придумайте короткую историю в одном абзаце. Представьте героя, место действия и конфликт.</li>
+      <li>Создайте раскадровку на 4–6 кадров. Опишите каждую сцену и, если возможно, сделайте наброски.</li>
+      <li>Напишите подробный промпт для каждого кадра, включив объект, контекст, стиль и настроение.</li>
+    </ol>
+    <h2>1.5 Инструменты</h2>
+    <ul>
+      <li><strong>Gemini:</strong> мультимодальная модель, генерирующая текст, изображения, звук и видео【289038682162511†L142-L166】.</li>
+      <li><strong>Grok:</strong> модель, оживляющая статические изображения и добавляющая кинематографичное движение【359591517461072†L221-L285】.</li>
+      <li><strong>ElevenLabs:</strong> система синтеза речи с управлением эмоциями и многоголосием【264971743013503†L24-L65】.</li>
+      <li><strong>Suno:</strong> генератор музыки, создающий песни и инструментальные треки по описанию【47503203825247†L177-L197】.</li>
+      <li><strong>CapCut:</strong> бесплатный видеоредактор с AI‑функциями, такими как авто‑субтитры и удаление фона【598944673568178†L130-L176】.</li>
+      <li><strong>Canva:</strong> онлайн‑платформа для дизайна с функциями генерации и анимации изображений и видео【553704467683165†L69-L131】.</li>
+      <li><strong>Nano Banana &amp; Kling:</strong> продвинутые модели для плавной анимации и сохранения внешнего вида персонажей【902543645726787†L347-L397】【805035439567289†L154-L160】.</li>
+    </ul>
+    <p>В следующем уроке вы углубитесь в создание сюжета и составление раскадровки. Фантазируйте и получайте удовольствие!</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI‑анимация 14+</p>
+    <p>Ресурсы: скачивайте изображения на <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+</footer>
+  <!-- Скрипт для переключения темы -->
+  <script>
+    const toggleBtnRU1 = document.getElementById('themeToggle');
+    const prefersDarkRU1 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDarkRU1) {
+      document.body.classList.add('dark');
+      if (toggleBtnRU1) toggleBtnRU1.textContent = 'Светлая тема';
+    }
+    if (toggleBtnRU1) {
+      toggleBtnRU1.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtnRU1.textContent = document.body.classList.contains('dark') ? 'Светлая тема' : 'Темная тема';
+      });
+    }
+  </script>
+</body>
+</html>

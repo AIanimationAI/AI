@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שיעור 4 – קול וצליל</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f9fbfd; color: #333; direction: rtl; text-align: right; }
+    nav { background: #007acc; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    nav .links a { color: #fff; text-decoration: none; margin-left: 15px; font-weight: bold; }
+    nav .links a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); color: #fff; padding: 30px 20px; text-align: center; border-radius: 0 0 10px 10px; }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin-top: 10px; font-size: 1.1rem; }
+    .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
+    h2 { color: #007acc; }
+    .image { text-align: center; margin: 20px 0; }
+    .image img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    .example { background: #eef6fc; border-right: 4px solid #007acc; padding: 15px 20px; margin: 20px 0; border-radius: 5px; text-align: right; }
+    pre { background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    ul { list-style: disc; padding-right: 20px; }
+    footer { margin-top: 60px; padding: 20px; background: #007acc; color: #fff; text-align: center; }
+    /* Dark mode overrides */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: #1d2d50; }
+    body.dark nav .links a,
+    body.dark nav .lang-switch a { color: #66b3ff; }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2 { color: #66b3ff; }
+    body.dark .example { background: #243654; border-right-color: #66b3ff; color: #d0d0d0; }
+    body.dark pre { background: #1f2d3a; }
+    body.dark footer { background: #1d2d50; color: #e5e5e5; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="links">
+      <a href="../index_he.html">דף הבית</a>
+      <a href="lesson1_he.html">שיעור 1</a>
+      <a href="lesson2_he.html">שיעור 2</a>
+      <a href="lesson3_he.html">שיעור 3</a>
+      <a href="lesson4_he.html">שיעור 4</a>
+      <a href="lesson5_he.html">שיעור 5</a>
+      <a href="lesson6_he.html">שיעור 6</a>
+    </div>
+    <div class="lang-switch">
+      <a href="../ru/lesson4_ru.html" style="color:#fff; margin-left:10px;">Русский</a>
+      <a href="../en/lesson4_en.html" style="color:#fff;">English</a>
+      <!-- Theme toggle button -->
+      <button id="themeToggle" style="margin-right:10px; padding:6px 10px; border:1px solid #fff; border-radius:5px; background:none; color:#fff; font-weight:bold; cursor:pointer;">מצב כהה</button>
+    </div>
+  </nav>
+  <header>
+    <h1>שיעור 4: קול וצליל</h1>
+    <p>הוסיפו אישיות ורגש לסרט שלכם בעזרת דיבוב ואפקטים קוליים.</p>
+  </header>
+  <div class="container">
+    <h2>4.1 כוחה של אינטונציה</h2>
+    <p>אינטונציה היא הדרך שבה אנחנו מעבירים רגשות, הדגשה וקצב בדיבור. מודלים קוליים כמו ElevenLabs v3 מאפשרים לכם לשלוט באינטונציה באמצעות תגיות רגשיות ותומכים בדיאלוגים עם כמה דוברים【264971743013503†L24-L65】. זה אומר שאתם יכולים ליצור קולות שלוחשים, צועקים או צוחקים וכך להחיות את הדמויות.</p>
+    <div class="image">
+      <img src="../images/voice_ui.png" alt="איור של ממשק קול AI">
+      <p><em>איור 1. ממשק קונספטואלי לפלטפורמה קולית מבוססת AI.</em></p>
+    </div>
+
+    <h2>4.2 הכנת תסריט</h2>
+    <p>לפני יצירת הקולות כתבו תסריט לכל סצנה. שמרו את הדיאלוג קצר וטבעי. חשבו איך כל משפט צריך להישמע — רגוע, נרגש, מבולבל וכן הלאה. השתמשו בהוראות בימוי כדי לציין הפסקות או הדגשות.</p>
+    <p>דוגמת תסריט לסצנה:</p>
+    <div class="example">
+      <pre>// סצנה: הרובוט פוגש חבר מסתורי&#10;רובוט: הלו? יש כאן מישהו?  (טון לחוץ)&#10;קול מהצללים: אל תפחד...  (רגוע, מרגיע)&#10;קריין: הרובוט התקרב, עיניו נפערו מסקרנות.</pre>
+    </div>
+
+    <h2>4.3 עבודה עם ElevenLabs</h2>
+    <p>להפקת קולות, הדביקו את התסריט בממשק של ElevenLabs ובחרו קול. אפשר לשנות את הטון על ידי הוספת תגיות כמו <code>[shout]</code>, <code>[whisper]</code> או <code>[happy]</code>. ElevenLabs תומך ביותר מ‑70 שפות ומאפשר דיאלוג עם כמה דוברים【264971743013503†L24-L65】.</p>
+    <p>לדוגמה, אפשר לכתוב:</p>
+    <div class="example">
+      <pre>[whisper] אל תפחד... [calm] בואו נצא להרפתקה.</pre>
+    </div>
+    <p>ה‑AI יפרש את התגיות הללו ויתאים את הקול בהתאם. ניתן גם לשכפל את קולכם (בהסכמתכם) כדי להפוך את הקריינות לאישית יותר.</p>
+
+    <h2>4.4 אפקטים קוליים ואווירה</h2>
+    <p>אפקטים קוליים מוסיפים מציאות ותחושת immersion. דמיינו צעדים מהדהדים במערה או ציוצי ציפורים ביער. כלים וספריות קול מאפשרים ליצור או לחפש אפקטים ספציפיים. כאשר מבקשים מהבינה המלאכותית קול, תארו במדויק מה אתם רוצים לשמוע: "גשם עדין נופל על עלים", "צעדים מתכתיים במסדרון" או "מחיאות כפיים רכות של קהל".</p>
+    <p>צלילי רקע יוצרים את מצב הרוח הכללי. רטט נמוך יכול להפוך את הסצנה למתוחה, בעוד מוזיקה קלילה הופכת אותה לשמחה. בסרט של טינו, המוזיקה ברקע שיקפה את מצב הרוח של כל סצנה【360697135777347†L74-L78】.</p>
+
+    <h2>4.5 תרגיל</h2>
+    <p>קחו סצנה מהסטוריבורד שלכם וכתבו תסריט עם לפחות שתי שורות. הוסיפו תגיות רגש לכל שורה. צרו את הקול באמצעות ElevenLabs (או כלי קול אחר) וראו כיצד תגיות שונות משפיעות על ההגייה. נסו להוסיף אפקט קולי פשוט או צליל רקע.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 קורס אנימציה עם AI – שיעור 4</p>
+    <p>משאבים: תמונות בחינם ניתן למצוא ב<a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeButton4 = document.getElementById('themeToggle');
+    const prefersDark4 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark4) {
+      document.body.classList.add('dark');
+      if (themeButton4) themeButton4.textContent = 'מצב בהיר';
+    }
+    if (themeButton4) {
+      themeButton4.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeButton4.textContent = document.body.classList.contains('dark') ? 'מצב בהיר' : 'מצב כהה';
+      });
+    }
+  </script>
+</body>
+</html>

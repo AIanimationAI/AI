@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שיעור 5 – מוזיקה</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f9fbfd; color: #333; direction: rtl; text-align: right; }
+    nav { background: #007acc; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    nav .links a { color: #fff; text-decoration: none; margin-left: 15px; font-weight: bold; }
+    nav .links a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); color: #fff; padding: 30px 20px; text-align: center; border-radius: 0 0 10px 10px; }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin-top: 10px; font-size: 1.1rem; }
+    .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
+    h2 { color: #007acc; }
+    .image { text-align: center; margin: 20px 0; }
+    .image img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    .example { background: #eef6fc; border-right: 4px solid #007acc; padding: 15px 20px; margin: 20px 0; border-radius: 5px; text-align: right; }
+    pre { background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    ul { list-style: disc; padding-right: 20px; }
+    footer { margin-top: 60px; padding: 20px; background: #007acc; color: #fff; text-align: center; }
+    /* Dark mode overrides */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: #1d2d50; }
+    body.dark nav .links a,
+    body.dark nav .lang-switch a { color: #66b3ff; }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2 { color: #66b3ff; }
+    body.dark .example { background: #243654; border-right-color: #66b3ff; color: #d0d0d0; }
+    body.dark pre { background: #1f2d3a; }
+    body.dark footer { background: #1d2d50; color: #e5e5e5; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="links">
+      <a href="../index_he.html">דף הבית</a>
+      <a href="lesson1_he.html">שיעור 1</a>
+      <a href="lesson2_he.html">שיעור 2</a>
+      <a href="lesson3_he.html">שיעור 3</a>
+      <a href="lesson4_he.html">שיעור 4</a>
+      <a href="lesson5_he.html">שיעור 5</a>
+      <a href="lesson6_he.html">שיעור 6</a>
+    </div>
+    <div class="lang-switch">
+      <a href="../ru/lesson5_ru.html" style="color:#fff; margin-left:10px;">Русский</a>
+      <a href="../en/lesson5_en.html" style="color:#fff;">English</a>
+      <!-- Theme toggle button -->
+      <button id="themeToggle" style="margin-right:10px; padding:6px 10px; border:1px solid #fff; border-radius:5px; background:none; color:#fff; font-weight:bold; cursor:pointer;">מצב כהה</button>
+    </div>
+  </nav>
+  <header>
+    <h1>שיעור 5: מוזיקה</h1>
+    <p>גלו כיצד לבחור וליצור מוזיקה המעצימה את מצב הרוח של הסיפור שלכם.</p>
+  </header>
+  <div class="container">
+    <h2>5.1 למה מוזיקה חשובה</h2>
+    <p>מוזיקה מכוונת את רגשות הקהל וקובעת את הקצב של הסרט. מנגינה שמחה הופכת את הסצנה למרוממת, בעוד קטע איטי במנור יכול להוסיף מתח. בסרט של טינו, המוזיקה ברקע נבחרה כך שתתאים לכל נקודה רגשית בסיפור【360697135777347†L74-L78】.</p>
+
+    <h2>5.2 עבודה עם Suno</h2>
+    <p>Suno היא פלטפורמה ליצירת מוזיקה מטקסט שמאפשרת לכם ליצור שירים או קטעים אינסטרומנטליים על בסיס פרומפטים תיאוריים【47503203825247†L177-L197】. אפשר לבקש קטע אינסטרומנטלי, לציין כלים (גיטרה, פסנתר, תופים), לבחור ז'אנר (ג'אז, פופ, תזמורתי) או להגדיר מצב רוח (שמחה, עצובה, מסתורית). Suno מאפשרת גם להאריך ולעבד מחדש קטעים ולהוציא ערוצים נפרדים לעריכה.</p>
+    <div class="image">
+      <img src="../images/music_ui.png" alt="איור של ממשק AI להפקת מוזיקה">
+      <p><em>איור 1. ממשק קונספטואלי ליצירת מוזיקה מבוססת AI.</em></p>
+    </div>
+
+    <h2>5.3 תיאור מצב רוח וסגנון</h2>
+    <p>כשכותבים פרומפטים למוזיקה, היו ספציפיים:</p>
+    <ul>
+      <li><strong>ז'אנר:</strong> פופ, רוק, תזמורתי, אלקטרוני, ג'אז, היפ‑הופ וכן הלאה.</li>
+      <li><strong>כלים:</strong> גיטרות, פסנתר, תופים, מיתרים, סינתיסייזרים.</li>
+      <li><strong>קצב:</strong> מהיר, איטי, בינוני.</li>
+      <li><strong>מצב רוח:</strong> שמח, מלנכולי, אפי, מסתורי.</li>
+    </ul>
+    <p>דוגמת פרומפט:</p>
+    <div class="example">
+      <pre>צור שיר פופ שמח וקופצני עם גיטרה אקוסטית ופרקוסיה קלה במהירות של 120 פעימות בדקה, המעניק תחושת הרפתקה וגילוי.</pre>
+    </div>
+    <p>אם הסצנה שלכם מתוחה או אפלה, בקשו קטע איטי במנור עם מיתרים נמוכים ותופים רכים.</p>
+
+    <h2>5.4 קאברים והתאמה</h2>
+    <p>Suno מאפשרת גם ליצור קאברים לשירים קיימים ולהתאים אותם לטון הסרט שלכם. כבדו תמיד זכויות יוצרים והשתמשו בחומרים ללא תמלוגים או קבלו רישיון מתאים.</p>
+
+    <h2>5.5 סנכרון מוזיקה ואנימציה</h2>
+    <p>כששילבתם מוזיקה עם אנימציה, התאימו רגעים מרכזיים (כמו החלפת סצנות או פעולות של דמויות) לקצב המוזיקה. השתמשו בציר הזמן בתוכנת העריכה כדי להתאים את פסגות הקטע למעברים. ייתכן שתצטרכו לחתוך או לחזור על חלקים כדי שיתאימו לאורך הסצנה.</p>
+
+    <h2>5.6 תרגיל</h2>
+    <p>כתבו שני פרומפטים מוזיקליים לסרט שלכם: אחד שמח ואחד מותח. צרו קטעים באמצעות Suno או כלי אחר והקשיבו להם על אותה הסצנה. שימו לב איך משתנה מצב הרוח. בחרו את הקטע התומך ביותר בסיפור שלכם.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 קורס אנימציה עם AI – שיעור 5</p>
+    <p>משאבים: תמונות בחינם ניתן למצוא ב<a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeButton5 = document.getElementById('themeToggle');
+    const prefersDark5 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark5) {
+      document.body.classList.add('dark');
+      if (themeButton5) themeButton5.textContent = 'מצב בהיר';
+    }
+    if (themeButton5) {
+      themeButton5.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeButton5.textContent = document.body.classList.contains('dark') ? 'מצב בהיר' : 'מצב כהה';
+      });
+    }
+  </script>
+</body>
+</html>

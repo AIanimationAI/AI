@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>שיעור 2 – סיפור וסטוריבורד</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f9fbfd; color: #333; direction: rtl; text-align: right; }
+    nav { background: #007acc; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+    nav .links a { color: #fff; text-decoration: none; margin-left: 15px; font-weight: bold; }
+    nav .links a:hover { text-decoration: underline; }
+    header { background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); color: #fff; padding: 30px 20px; text-align: center; border-radius: 0 0 10px 10px; }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin-top: 10px; font-size: 1.1rem; }
+    .container { width: 90%; max-width: 1000px; margin: auto; padding: 20px; }
+    h2 { color: #007acc; }
+    .image { text-align: center; margin: 20px 0; }
+    .image img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+    .example { background: #eef6fc; border-right: 4px solid #007acc; padding: 15px 20px; margin: 20px 0; border-radius: 5px; text-align: right; }
+    pre { background: #f5f5f5; padding: 10px; border-radius: 4px; overflow-x: auto; }
+    ul { list-style: disc; padding-right: 20px; }
+    footer { margin-top: 60px; padding: 20px; background: #007acc; color: #fff; text-align: center; }
+    /* Dark mode overrides */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: #1d2d50; }
+    body.dark nav .links a,
+    body.dark nav .lang-switch a { color: #66b3ff; }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2 { color: #66b3ff; }
+    body.dark .example { background: #243654; border-right-color: #66b3ff; color: #d0d0d0; }
+    body.dark pre { background: #1f2d3a; }
+    body.dark footer { background: #1d2d50; color: #e5e5e5; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="links">
+      <a href="../index_he.html">דף הבית</a>
+      <a href="lesson1_he.html">שיעור 1</a>
+      <a href="lesson2_he.html">שיעור 2</a>
+      <a href="lesson3_he.html">שיעור 3</a>
+      <a href="lesson4_he.html">שיעור 4</a>
+      <a href="lesson5_he.html">שיעור 5</a>
+      <a href="lesson6_he.html">שיעור 6</a>
+    </div>
+    <div class="lang-switch">
+      <a href="../ru/lesson2_ru.html" style="color:#fff; margin-left:10px;">Русский</a>
+      <a href="../en/lesson2_en.html" style="color:#fff;">English</a>
+      <!-- Theme toggle button -->
+      <button id="themeToggle" style="margin-right:10px; padding:6px 10px; border:1px solid #fff; border-radius:5px; background:none; color:#fff; font-weight:bold; cursor:pointer;">מצב כהה</button>
+    </div>
+  </nav>
+  <header>
+    <h1>שיעור 2: סיפור וסטוריבורד</h1>
+    <p>הפכו את הרעיונות שלכם לעלילה, עצבו דמויות ולמדו לתכנן את האנימציה עם סטוריבורד.</p>
+  </header>
+  <div class="container">
+    <h2>2.1 בניית עלילה</h2>
+    <p>סיפור טוב עונה על ארבע שאלות: <strong>איפה</strong> הוא מתרחש? <strong>מי</strong> מעורב? <strong>מה</strong> קורה? ו<strong>למה</strong> זה חשוב? בדוגמה של טינו הרכבת, הצוות התחיל ברעיון שאפתני של סרטון ללא מילים שמביע רגשות באמצעות תמונות【360697135777347†L28-L38】. כל סצנה תוכננה לעורר רגש — שמחה, עצב, פליאה או שלווה — מה שהוביל את המסע.</p>
+    <p>התחילו בכתיבת משפט אחד המסכם את הסיפור שלכם. לדוגמה: "בעיר עתידנית רובוט בודד מגלה חברות בזמן שהוא חוקר גנים נסתרים." המשפט הזה יעזור לכם להתמקד בסטוריבורד.</p>
+
+    <h2>2.2 פיתוח דמויות ודיאלוגים</h2>
+    <p>הדמויות הן הלב של הסיפור. החליטו כיצד הן נראות, מה האישיות שלהן ומה מניע אותן. לכל דמות ראשית כתבו תיאור קצר וחשבו איך היא מדברת. הדיאלוג צריך להישמע טבעי ולחשוף את אופיה של הדמות.</p>
+    <p>אפשר להשתמש ב‑AI כדי ליצור דמויות עקביות. כלים כמו Nano Banana ו‑Kling שומרים על עקביות הדמות בסצנות שונות【902543645726787†L347-L397】. בעת כתיבת פרומפט לדמות, ציינו פרטים כגון גיל, לבוש, תווי פנים והבעת רגש.</p>
+    <div class="example">
+      <strong>דוגמה לפרומפט דמות:</strong>
+      <pre>רובוט מתבגר סקרן עם עיניים כחולות עגולות וגוף כסוף, עוטה צעיף צהוב, עומד בביטחון על סקייטבורד מרחף, מצויר בסגנון 2D נקי.</pre>
+    </div>
+
+    <h2>2.3 פריימים מרכזיים וסטוריבורדים</h2>
+    <p>פריימים מרכזיים הם רגעים חשובים באנימציה שמציגים פעולות או רגשות מרכזיים. תכנון הפריימים האלה מבטיח שהסיפור יזרום בצורה חלקה. סטוריבורד מארגן את הפריימים לפי סדר ומסייע לדמיין זוויות מצלמה ומעברים. להלן דוגמה:</p>
+    <div class="image">
+      <img src="../images/storyboard_example.png" alt="דוגמה לסטוריבורד עם רישומים">
+      <p><em>איור 1. סטוריבורד פשוט של ארבעה פריימים המתווה סצנה קצרה.</em></p>
+    </div>
+    <p>כל פריים צריך לכלול תיאור קצר: מה קורה, מה המצלמה עושה וכל דיאלוג רלוונטי. שמרו על הסקיצות פשוטות; הן רק מדריך ליצירת התמונות בהמשך.</p>
+
+    <h2>2.4 כתיבת פרומפטים לסצנות</h2>
+    <p>לכל פריים בסטוריבורד כתבו פרומפט מפורט שמסביר ל‑AI מה ליצור. כללו:</p>
+    <ul>
+      <li><strong>דמויות:</strong> מי נמצא בסצנה? תארו את המראה, הרגשות והפעולות שלהם.</li>
+      <li><strong>מיקום:</strong> היכן מתרחשת הסצנה? תארו את הסביבה, שעת היום והאווירה.</li>
+      <li><strong>סגנון ומצב רוח:</strong> ציינו את סגנון האמנות (מצויר, ריאליסטי, אנימה) ואת המצב הרגשי (עליז, מסתורי, דרמטי).</li>
+    </ul>
+    <p>דוגמת פרומפט לסצנה:</p>
+    <div class="example">
+      <pre>הרובוט הסקרן רוכב על סקייטבורד מרחף דרך שוק ניאון הומה בשעת דמדומים. דוכנים צבעוניים משתרעים לאורך הרחוב ושלטים הולוגרפיים מהבהבים ברקע. הסצנה מאוירת בסגנון אנימה סייברפאנק צבעוני.</pre>
+    </div>
+    <p>שימוש עקבי בפרומפטים מפורטים עוזר ל‑AI לשמור על מראה הדמויות והסגנון לאורך מספר פריימים. לפי הצוות של AuraAI, הם יצרו תמונות מפורטות לכל סצנה בעזרת פרומפטים תיאוריים【360697135777347†L40-L50】 ולאחר מכן הנפישו אותן【360697135777347†L52-L57】.</p>
+
+    <h2>2.5 תרגיל</h2>
+    <p>צרו סטוריבורד של שישה פריימים לסיפור שלכם. עבור כל פריים כתבו פרומפט מפורט לפי ההנחיות לעיל. שרטטו סקיצות מהירות של כל סצנה וציינו כל דיאלוג או תנועת מצלמה.</p>
+
+    <h2>2.6 טיפים ומשאבים</h2>
+    <ul>
+      <li>השתמשו ב<strong>משפט תקציר</strong> כדי להישאר ממוקדים בעלילה.</li>
+      <li>ודאו שכל פריים תורם להתקדמות הסיפור. הימנעו מחזרות.</li>
+      <li>הסתכלו על סרטונים מונפשים שנוצרו עם AI כמו המסע של טינו להשראה【360697135777347†L52-L78】.</li>
+      <li>לעזרה נוספת, עיינו בתיעוד הרשמי של הכלים: Gemini (Google AI)【289038682162511†L142-L166】, Kling【805035439567289†L154-L160】 ואחרים.</li>
+    </ul>
+  </div>
+  <footer>
+    <p>&copy; 2026 קורס אנימציה עם AI – שיעור 2</p>
+    <p>משאבים: תמונות בחינם ניתן למצוא ב<a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const themeButton2 = document.getElementById('themeToggle');
+    const prefersDark2 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark2) {
+      document.body.classList.add('dark');
+      if (themeButton2) themeButton2.textContent = 'מצב בהיר';
+    }
+    if (themeButton2) {
+      themeButton2.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeButton2.textContent = document.body.classList.contains('dark') ? 'מצב בהיר' : 'מצב כהה';
+      });
+    }
+  </script>
+</body>
+</html>

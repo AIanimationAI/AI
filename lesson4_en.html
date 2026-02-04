@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 – Voice &amp; Sound</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    ul { margin-left:20px; }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+
+    /* Dark mode overrides */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b3ff; }
+    body.dark p { color: #d0d0d0; }
+    body.dark details { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark details[open] { background: #25395a; }
+    body.dark a { color: #ffae62; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active { background: #004f7c; color: #fff; }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+    body.dark .image img { filter: brightness(0.9); }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_en.html">Home</a>
+      <a href="lesson1_en.html">Lesson 1</a>
+      <a href="lesson2_en.html">Lesson 2</a>
+      <a href="lesson3_en.html">Lesson 3</a>
+      <a href="lesson4_en.html" class="active">Lesson 4</a>
+      <a href="lesson5_en.html">Lesson 5</a>
+      <a href="lesson6_en.html">Lesson 6</a>
+    </div>
+    <div class="lang">
+      <a href="lesson4_en.html">EN</a> |
+      <a href="../ru/lesson4_ru.html">RU</a> |
+      <a href="../he/lesson4_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Dark Mode</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Lesson 4: Voice &amp; Sound</h1>
+    <p>Give your characters a voice and fill your world with sound. Learn how intonation, narration and effects bring stories to life.</p>
+    <img src="../images/sound.png" alt="Sound icon" class="robot">
+  </header>
+  <div class="container">
+    <h2>4.1 Intonation &amp; Expression</h2>
+    <p>How a line is spoken changes everything. Intonation conveys emotion, personality and meaning. Try saying “I can’t believe it” in a happy, sad and angry tone — they all feel different!</p>
+    <details>
+      <summary>Common Voice Emotions</summary>
+      <ul>
+        <li><strong>Joyful:</strong> upbeat, light and fast.</li>
+        <li><strong>Sad:</strong> slower, softer and lower pitch.</li>
+        <li><strong>Angry:</strong> louder, sharper and clipped.</li>
+        <li><strong>Surprised:</strong> rising pitch and quick.</li>
+      </ul>
+    </details>
+    <h2>4.2 Writing Your Script</h2>
+    <p>Before recording, write what each character will say. Keep sentences short and natural. Stage directions (like “whispers” or “shouts”) help actors or AI know how to deliver the line.</p>
+    <details>
+      <summary>Script Example</summary>
+      <pre>Lucy (excited): I did it! The machine is ready!
+Storm (rumbling): *Thunder booms in the distance*
+Lucy (whispers): I hope this works…</pre>
+    </details>
+    <h2>4.3 Using ElevenLabs</h2>
+    <p>ElevenLabs is a powerful text‑to‑speech system. It supports over 70 languages and lets you control emotions and speaker voices【264971743013503†L24-L65】. Choose a voice that matches your character and adjust the emotion tags (like <code>&lt;sad&gt;</code>, <code>&lt;angry&gt;</code> or <code>&lt;whisper&gt;</code>) to fine‑tune the delivery.</p>
+    <div class="image">
+      <img src="../images/voice_ui.png" alt="Voice platform interface">
+      <caption><em>Figure 1. A conceptual interface for recording or generating voice lines.</em></caption>
+    </div>
+    <h2>4.4 Recording Your Own Voice</h2>
+    <p>If you want a personal touch, record yourself! Find a quiet room, use a smartphone or microphone, and speak clearly. Rehearse the line to capture the right emotion. You can mix your recording with AI voices if you have multiple characters.</p>
+    <h2>4.5 Sound Effects &amp; Ambience</h2>
+    <p>Sound effects (like footsteps, wind or thunder) and background ambience (crowds, forests, cities) make your scenes feel real. You can find free sound libraries online or generate them with tools like Suno or CapCut. Layer sounds gently so they don’t overpower the dialogue.</p>
+    <h2>4.6 Communicating With AI</h2>
+    <p>When generating voices or sounds with AI, describe exactly what you want. Mention the speaker’s age, accent, mood and pace. For example: “A friendly young girl speaks in a soft whisper with a hint of excitement.” The clearer your description, the better the result.</p>
+    <h2>4.7 Assignment</h2>
+    <ol>
+      <li>Write a script for your story. Include dialogue tags (who says what) and stage directions.</li>
+      <li>Record one sentence three times: happy, sad and angry. Listen to how the mood changes.</li>
+      <li>Choose a voice for each character using ElevenLabs or another text‑to‑speech tool, and generate their lines.</li>
+      <li>Collect or create sound effects for important actions in your story.</li>
+    </ol>
+    <p>In the next lesson we’ll compose music to set the mood and tie everything together.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI Animation 14+</p>
+    <p>Resources: get free images at <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggleBtn4 = document.getElementById('themeToggle');
+    const prefersDark4 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark4) {
+      document.body.classList.add('dark');
+      if (toggleBtn4) toggleBtn4.textContent = 'Light Mode';
+    }
+    if (toggleBtn4) {
+      toggleBtn4.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtn4.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+      });
+    }
+  </script>
+</body>
+</html>

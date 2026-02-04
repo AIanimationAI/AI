@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Animation 14+ – Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f5f8fc;
+      color: #333;
+    }
+    /* Header with gradient and robot */
+    .hero {
+      background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%);
+      color: #fff;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+    .hero .robot {
+      position: absolute;
+      bottom: 0;
+      right: 20px;
+      width: 220px;
+    }
+    /* Navigation bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255,255,255,0.9);
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav .tabs a {
+      margin-right: 15px;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      color: #004f7c;
+      font-weight: 600;
+    }
+    nav .tabs a.active {
+      background: #007acc;
+      color: #fff;
+    }
+    nav .lang a {
+      text-decoration: none;
+      color: #007acc;
+      margin-left: 10px;
+      font-weight: bold;
+    }
+    nav .lang a:hover {
+      text-decoration: underline;
+    }
+
+    /* Dark mode overrides */
+    body.dark {
+      background-color: #121212;
+      color: #e5e5e5;
+    }
+    body.dark nav {
+      background: rgba(20,20,20,0.95);
+    }
+    body.dark .hero {
+      background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%);
+      color: #e5e5e5;
+    }
+    body.dark .hero .robot {
+      filter: brightness(0.9);
+    }
+    body.dark h1, body.dark h2, body.dark h3 {
+      color: #66b3ff;
+    }
+    body.dark p { color: #d0d0d0; }
+    body.dark .lesson-box {
+      background: #1f2b3a;
+      border: 1px solid #2c3e55;
+      box-shadow: none;
+    }
+    body.dark .lesson-box h3 { color: #66b3ff; }
+    body.dark .lesson-box a { color: #ffae62; }
+    body.dark .steps span { color: #66b3ff; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active {
+      background: #004f7c;
+      color: #fff;
+    }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark .demo-button {
+      background: #bb5e20;
+    }
+    body.dark .demo-button:hover {
+      background: #a14f17;
+    }
+    body.dark #themeToggle {
+      border-color: #66b3ff;
+      color: #66b3ff;
+    }
+    /* Section styles */
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 0 40px;
+    }
+    h2 {
+      color: #007acc;
+      font-size: 1.8rem;
+      margin-top: 40px;
+    }
+    /* Steps row */
+    .steps {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 30px 0;
+      flex-wrap: wrap;
+    }
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+    }
+    .step img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+    .step span {
+      font-weight: 600;
+      color: #004f7c;
+    }
+    /* Demo button */
+    .demo-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #ff8c42;
+      color: #fff;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .demo-button:hover {
+      background: #ff7b26;
+    }
+    /* Course overview */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+    .lesson-box {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+      padding: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s;
+    }
+    .lesson-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .lesson-box h3 {
+      margin-top: 0;
+      color: #007acc;
+      font-size: 1.3rem;
+    }
+    .lesson-box p {
+      font-size: 0.95rem;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+    .lesson-box a {
+      margin-top: 12px;
+      align-self: flex-start;
+      color: #ff8c42;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .lesson-box a:hover { text-decoration: underline; }
+
+    /* Footer styles */
+    footer {
+      margin-top: 40px;
+      background: #007acc;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+    body.dark footer {
+      background: #004f7c;
+      color: #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <div class="tabs">
+      <a href="index_en.html" class="active">Home</a>
+      <a href="en/lesson1_en.html">Lesson 1</a>
+      <a href="en/lesson2_en.html">Lesson 2</a>
+      <a href="en/lesson3_en.html">Lesson 3</a>
+      <a href="en/lesson4_en.html">Lesson 4</a>
+      <a href="en/lesson5_en.html">Lesson 5</a>
+      <a href="en/lesson6_en.html">Lesson 6</a>
+    </div>
+    <div class="lang">
+      <a href="index_en.html">EN</a> |
+      <a href="index_ru.html">RU</a> |
+      <a href="index_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Dark Mode</button>
+    </div>
+  </nav>
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>AI Animation 14+</h1>
+    <p>Dive into the art of AI‑powered animation and create a unique short film. Perfect for ages 14+ and curious adults.</p>
+    <img src="images/robot_example.png" class="robot" alt="Robot mascot">
+  </section>
+  <div class="container">
+    <h2>Watch the Magic Happen</h2>
+    <p>Follow the creative journey from a simple idea to a finished video. Each stage builds upon the last, turning imagination into reality.</p>
+    <div class="steps">
+      <div class="step">
+        <img src="images/idea.png" alt="Idea icon">
+        <span>Idea</span>
+      </div>
+      <div class="step">
+        <img src="images/storyboard.png" alt="Storyboard icon">
+        <span>Storyboard</span>
+      </div>
+      <div class="step">
+        <img src="images/motion.png" alt="Animation icon">
+        <span>Animate</span>
+      </div>
+      <div class="step">
+        <img src="images/sound.png" alt="Sound icon">
+        <span>Sound</span>
+      </div>
+      <div class="step">
+        <img src="images/celebration.png" alt="Final video icon">
+        <span>Video</span>
+      </div>
+    </div>
+    <p style="text-align:center;">
+      <a href="images/ai_demo.gif" target="_blank" class="demo-button">Play Demo</a>
+    </p>
+    <h2>Course Overview</h2>
+    <p>Expand each lesson below to explore the topics you’ll learn. Click “Read more” for a detailed guide.</p>
+    <div class="course-grid">
+      <div class="lesson-box">
+        <h3>Lesson 1<br>Introduction</h3>
+        <p>Meet the AI tools, explore what animation is and why every story begins with a spark of imagination.</p>
+        <a href="en/lesson1_en.html">Read more</a>
+      </div>
+      <div class="lesson-box">
+        <h3>Lesson 2<br>Story & Storyboard</h3>
+        <p>Write engaging plots, design characters and build a scene-by-scene storyboard using descriptive prompts.</p>
+        <a href="en/lesson2_en.html">Read more</a>
+      </div>
+      <div class="lesson-box">
+        <h3>Lesson 3<br>Animation & Motion</h3>
+        <p>Bring your drawings to life, add camera moves and transitions, and enhance the quality of your clips.</p>
+        <a href="en/lesson3_en.html">Read more</a>
+      </div>
+      <div class="lesson-box">
+        <h3>Lesson 4<br>Voice & Sound</h3>
+        <p>Discover how intonation shapes characters, script voice‑overs and add immersive sound effects.</p>
+        <a href="en/lesson4_en.html">Read more</a>
+      </div>
+      <div class="lesson-box">
+        <h3>Lesson 5<br>Music</h3>
+        <p>Create mood‑setting tracks with Suno, specify genre and instruments, and sync music with your scenes.</p>
+        <a href="en/lesson5_en.html">Read more</a>
+      </div>
+      <div class="lesson-box">
+        <h3>Lesson 6<br>Final Edit</h3>
+        <p>Assemble your film in CapCut, refine cuts and transitions, adjust audio and export your masterpiece.</p>
+        <a href="en/lesson6_en.html">Read more</a>
+      </div>
+    </div>
+  </div>
+    <footer>
+      <p>&copy; 2026 AI Animation 14+</p>
+      <p>Resources: get free images at <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+    </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) {
+      document.body.classList.add('dark');
+      if (toggle) toggle.textContent = 'Light Mode';
+    }
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggle.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+      });
+    }
+  </script>
+</body>
+</html>

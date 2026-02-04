@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 5 – Music</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+
+    /* Dark mode overrides */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b3ff; }
+    body.dark p { color: #d0d0d0; }
+    body.dark details { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark details[open] { background: #25395a; }
+    body.dark a { color: #ffae62; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active { background: #004f7c; color: #fff; }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+    body.dark .image img { filter: brightness(0.9); }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_en.html">Home</a>
+      <a href="lesson1_en.html">Lesson 1</a>
+      <a href="lesson2_en.html">Lesson 2</a>
+      <a href="lesson3_en.html">Lesson 3</a>
+      <a href="lesson4_en.html">Lesson 4</a>
+      <a href="lesson5_en.html" class="active">Lesson 5</a>
+      <a href="lesson6_en.html">Lesson 6</a>
+    </div>
+    <div class="lang">
+      <a href="lesson5_en.html">EN</a> |
+      <a href="../ru/lesson5_ru.html">RU</a> |
+      <a href="../he/lesson5_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Dark Mode</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Lesson 5: Music</h1>
+    <p>Compose the soundtrack for your film. Explore how music sets the mood, drives the rhythm and enhances every scene.</p>
+    <img src="../images/music_ui.png" alt="Music interface icon" class="robot">
+  </header>
+  <div class="container">
+    <h2>5.1 Why Music Matters</h2>
+    <p>Music is the emotional backbone of your animation. A cheerful melody can make a scene feel playful, while a slow piano can make it feel sad or thoughtful. Choosing the right music helps your audience connect with the story.</p>
+    <h2>5.2 Exploring Suno</h2>
+    <p>Suno is an AI music generator that creates songs and instrumental tracks based on text prompts. It supports different genres and moods, lets you extend your tracks and even extract individual instruments (stems)【47503203825247†L177-L197】.</p>
+    <details>
+      <summary>Writing Music Prompts</summary>
+      <p>Describe the mood, genre and instruments you want. For example: “An upbeat pop song with acoustic guitar and drums, cheerful and energetic” or “A calm ambient track with piano and soft strings, perfect for a sunset scene”. Mention tempo (fast or slow) and whether you want lyrics or instrumental.</p>
+    </details>
+    <h2>5.3 Composing Your Track</h2>
+    <p>Start by deciding on the mood for your scene. Is it a chase, a celebration or a sad goodbye? Write a short prompt and generate a track in Suno. Listen carefully and adjust the prompt until the music feels right.</p>
+    <details>
+      <summary>Tips for Great Music</summary>
+      <ul>
+        <li>Keep it simple: avoid too many instruments or busy rhythms that distract from the story.</li>
+        <li>Match the tempo to the action: fast music for excitement, slow music for calm moments.</li>
+        <li>Use repetition: repeating themes or motifs ties scenes together.</li>
+      </ul>
+    </details>
+    <h2>5.4 Covers &amp; Adaptation</h2>
+    <p>Suno can create cover versions of existing songs in new styles or languages. You can also adapt a generated track by changing instruments or slowing it down. This flexibility helps you fine‑tune the sound to match your visuals.</p>
+    <h2>5.5 Synchronizing Music &amp; Animation</h2>
+    <p>When editing, align key moments in your video with beats in the music. For example, sync a character jump with a drum hit. If a scene slows down, fade the music gently. CapCut makes it easy to trim and reposition audio clips to fit your footage【598944673568178†L130-L176】.</p>
+    <details>
+      <summary>Example Sync Plan</summary>
+      <p>Scene of Lucy launching her machine: use an uplifting crescendo as she takes off. When she reaches the lighthouse, let the music pause for a moment to build tension, then bring in a triumphant melody as the light turns on.</p>
+    </details>
+    <h2>5.6 Assignment</h2>
+    <ol>
+      <li>Create a 30‑second music track for one of your scenes using Suno. Describe the mood, genre and instruments in your prompt.</li>
+      <li>Generate a second version with a different mood (e.g., adventurous vs. calm) and compare which fits better.</li>
+      <li>Experiment with syncing the track to your animated clips. Note where beats align with actions.</li>
+    </ol>
+    <p>Next comes the final step: editing everything together!</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI Animation 14+</p>
+    <p>Resources: get free images at <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+</footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const toggleBtn5 = document.getElementById('themeToggle');
+    const prefersDark5 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark5) {
+      document.body.classList.add('dark');
+      if (toggleBtn5) toggleBtn5.textContent = 'Light Mode';
+    }
+    if (toggleBtn5) {
+      toggleBtn5.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtn5.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+      });
+    }
+  </script>
+</body>
+</html>

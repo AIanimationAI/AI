@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 6 – Финальный монтаж</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+
+    /* Тёмный режим */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b3ff; }
+    body.dark p { color: #d0d0d0; }
+    body.dark details { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark details[open] { background: #25395a; }
+    body.dark a { color: #ffae62; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active { background: #004f7c; color: #fff; }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+    body.dark .image img { filter: brightness(0.9); }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_ru.html">Домой</a>
+      <a href="lesson1_ru.html">Урок 1</a>
+      <a href="lesson2_ru.html">Урок 2</a>
+      <a href="lesson3_ru.html">Урок 3</a>
+      <a href="lesson4_ru.html">Урок 4</a>
+      <a href="lesson5_ru.html">Урок 5</a>
+      <a href="lesson6_ru.html" class="active">Урок 6</a>
+    </div>
+    <div class="lang">
+      <a href="../en/lesson6_en.html">EN</a> |
+      <a href="lesson6_ru.html">RU</a> |
+      <a href="../he/lesson6_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Темная тема</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Урок 6: Финальный монтаж и монтаж</h1>
+    <p>Пора собрать всё вместе! Узнайте, как соединить клипы, музыку и звуки в завершённый фильм.</p>
+    <img src="../images/celebration.png" alt="Иконка готового видео" class="robot">
+  </header>
+  <div class="container">
+    <h2>6.1 Подготовка материалов</h2>
+    <p>Соберите все анимированные клипы, голосовые записи, звуковые эффекты и музыкальные треки. Дайте файлам понятные имена и разложите их по папкам. Это значительно упростит монтаж.</p>
+    <h2>6.2 Монтаж в CapCut</h2>
+    <p>CapCut — удобный видеоредактор с AI‑функциями, такими как авто‑субтитры и удаление фона【598944673568178†L130-L176】. Импортируйте клипы и расположите их на таймлайне по порядку. Используйте инструменты обрезки, чтобы убрать лишнее, и функцию разделения, чтобы точно резать сцены.</p>
+    <div class="image">
+      <img src="../images/video_edit_ui.png" alt="Интерфейс видеомонтажа">
+      <p><em>Рис. 1. Концептуальный интерфейс видеомонтажа с таймлайном, предпросмотром и дорожками.</em></p>
+    </div>
+    <details>
+      <summary>Советы по монтажу</summary>
+      <ul>
+        <li>Перетаскивайте клипы в нужном порядке. Используйте маркеры для обозначения ключевых моментов.</li>
+        <li>Добавляйте переходы (срезы или затемнения) между сценами, чтобы сгладить изменения.</li>
+        <li>Размещайте голос и звуковые эффекты на отдельных дорожках, чтобы регулировать громкость отдельно.</li>
+        <li>Используйте авто‑субтитры или титры, если хотите, чтобы зрители читали текст.</li>
+      </ul>
+    </details>
+    <h2>6.3 Ритм и темп</h2>
+    <p>Ритм направляет вашу историю. Обратите внимание на длительность сцен и акценты в музыке. Если эпизод кажется быстрым, замедлите монтаж или удлините кадр. Если скучно — сократите. Совмещайте крупные визуальные моменты с сильными ударами музыки.</p>
+    <h2>6.4 Финальные штрихи</h2>
+    <p>Отрегулируйте цвета, яркость и контраст, чтобы все сцены смотрелись единообразно. Добавьте титры, логотипы и благодарности. Просмотрите фильм несколько раз и внесите мелкие правки до тех пор, пока он не станет гармоничным. Помните: идеально не обязательно — главное, чтобы история была понятна и увлекательна.</p>
+    <h2>6.5 Экспорт и публикация</h2>
+    <p>Когда вы довольны результатом, экспортируйте фильм в формате MP4 или MOV. Выберите разрешение (1080p достаточно для большинства задач) и подходящий битрейт. Поделитесь роликом с друзьями или загрузите на YouTube или Vimeo. Празднуйте свой успех!</p>
+    <h2>6.6 Контрольный список</h2>
+    <ul>
+      <li>Все сцены идут в правильном порядке и понятны.</li>
+      <li>Голос, звуки и музыка сбалансированы и чисты.</li>
+      <li>Нет лишних пауз или резких обрывов.</li>
+      <li>Фильм имеет начало, середину и конец.</li>
+    </ul>
+    <p>Гордитесь тем, что вы создали! Вы прошли путь от идеи до готового мультфильма. Продолжайте экспериментировать и рассказывать истории — мир ждёт ваших работ.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI‑анимация 14+</p>
+    <p>Ресурсы: скачивайте изображения на <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+</footer>
+  <!-- Скрипт для переключения темы -->
+  <script>
+    const toggleBtnRU6 = document.getElementById('themeToggle');
+    const prefersDarkRU6 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDarkRU6) {
+      document.body.classList.add('dark');
+      if (toggleBtnRU6) toggleBtnRU6.textContent = 'Светлая тема';
+    }
+    if (toggleBtnRU6) {
+      toggleBtnRU6.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtnRU6.textContent = document.body.classList.contains('dark') ? 'Светлая тема' : 'Темная тема';
+      });
+    }
+  </script>
+</body>
+</html>

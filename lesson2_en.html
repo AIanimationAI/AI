@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 – Story &amp; Storyboard</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    .example { background:#eef6fc; border-left:4px solid #007acc; padding:15px 20px; margin:20px 0; border-radius:5px; }
+    pre { background:#f5f5f5; padding:10px; border-radius:4px; overflow-x:auto; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+    /* Dark mode overrides */
+    body.dark { background-color:#121212; color:#e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color:#e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color:#66b3ff; }
+    body.dark p { color:#d0d0d0; }
+    body.dark .example { background:#17223b; border-left-color:#66b3ff; color:#e5e5e5; }
+    body.dark details, body.dark .image, body.dark .container { background: inherit; color: inherit; }
+    body.dark nav .tabs a { color:#66b3ff; }
+    body.dark nav .tabs a.active { background:#004f7c; color:#fff; }
+    body.dark nav .lang a { color:#66b3ff; }
+    body.dark #themeToggle { border-color:#66b3ff; color:#66b3ff; }
+    body.dark footer { background:#004f7c; color:#e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_en.html">Home</a>
+      <a href="lesson1_en.html">Lesson 1</a>
+      <a href="lesson2_en.html" class="active">Lesson 2</a>
+      <a href="lesson3_en.html">Lesson 3</a>
+      <a href="lesson4_en.html">Lesson 4</a>
+      <a href="lesson5_en.html">Lesson 5</a>
+      <a href="lesson6_en.html">Lesson 6</a>
+    </div>
+    <div class="lang">
+      <a href="lesson2_en.html">EN</a> |
+      <a href="../ru/lesson2_ru.html">RU</a> |
+      <a href="../he/lesson2_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Dark Mode</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Lesson 2: Story &amp; Storyboard</h1>
+    <p>Plan your movie like a pro. Develop your plot, design characters and map out your scenes step by step.</p>
+    <img src="../images/storyboard.png" alt="Storyboard icon" class="robot">
+  </header>
+  <div class="container">
+    <h2>2.1 Crafting a Compelling Plot</h2>
+    <p>The best stories answer three questions: <strong>Where?</strong> <strong>Who?</strong> and <strong>What happens?</strong> Decide on a setting (a forest, a spaceship or a school), create characters with goals and personalities, and imagine a conflict or challenge they must overcome.</p>
+    <details>
+      <summary>Example Plot Outline</summary>
+      <p>Lucy the inventor lives in a sleepy seaside town. She dreams of building a flying machine. One day, a storm hits and the lighthouse lamp goes out. Lucy must race against time to finish her invention, fly to the lighthouse and save the ships from crashing.</p>
+    </details>
+    <h2>2.2 Characters &amp; Dialogue</h2>
+    <p>Your characters drive the story forward. Give them unique looks, motivations and voices. Think about how they talk and react. In animation you can use AI to generate consistent characters: write the same description each time so the AI knows who they are.</p>
+    <details>
+      <summary>Keeping Characters Consistent</summary>
+      <p>Use the same prompt for your character across multiple images. For example: “Lucy, a clever 13‑year‑old girl with curly brown hair and bright green eyes, wearing a denim jumpsuit and goggles, standing in her workshop”. Keeping the description stable (and using the same seed if supported) ensures Lucy always looks the same.</p>
+    </details>
+    <h2>2.3 Writing Scene Prompts</h2>
+    <p>Each panel in your storyboard needs its own prompt. Include the character, setting, action and style. Remember to mention mood and any props. Here is a comparison:</p>
+    <div class="example">
+      <strong>Poor prompt:</strong>
+      <pre>A girl builds something.</pre>
+      <strong>Better prompt:</strong>
+      <pre>Lucy, a clever 13‑year‑old with curly brown hair and green eyes, works on a wooden flying machine in her sunlit workshop filled with gears and blueprints. She wears goggles and a denim jumpsuit, illustrated in a warm watercolor style.</pre>
+    </div>
+    <details>
+      <summary>Prompt Checklist</summary>
+      <ul>
+        <li>Who is in the scene? (name, age, appearance)</li>
+        <li>Where are they? (location, time of day)</li>
+        <li>What are they doing? (action, emotion)</li>
+        <li>How should it look? (art style, colors, mood)</li>
+      </ul>
+    </details>
+    <h2>2.4 Building Your Storyboard</h2>
+    <p>A storyboard is a visual plan for your film. It shows the sequence of scenes and helps you see the story at a glance. You can use simple stick figures or AI‑generated images to represent each panel.</p>
+    <div class="image">
+      <img src="../images/flow_diagram.png" alt="Idea to video flow diagram">
+      <caption><em>Figure 2. The journey from idea to finished video: idea → storyboard → frames → sound → video.</em></caption>
+    </div>
+    <details>
+      <summary>Storyboard Example</summary>
+      <p>Panel 1: Lucy sketches a flying machine while seagulls fly outside.<br>
+         Panel 2: A thunderstorm rolls in and waves crash against the harbor.<br>
+         Panel 3: The lighthouse lamp flickers and goes dark.<br>
+         Panel 4: Lucy straps on her goggles and runs to her machine.<br>
+         Panel 5: She launches into the air and glides toward the lighthouse.<br>
+         Panel 6: She lands and reignites the lamp just in time, saving the ships.</p>
+    </details>
+    <h2>2.5 Assignment</h2>
+    <ol>
+      <li>Write a brief plot summary describing your protagonist, setting and conflict.</li>
+      <li>Create a storyboard with 6–8 panels. Describe each scene and, if possible, sketch or generate a quick image.</li>
+      <li>Write a detailed prompt for each panel. Include subject, context, action, style and mood.</li>
+    </ol>
+    <p>Keep your story simple and fun. In the next lesson we’ll turn your board into moving scenes!</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI Animation 14+</p>
+    <p>Resources: get free images at <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const btn2 = document.getElementById('themeToggle');
+    const prefersDark2 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark2) {
+      document.body.classList.add('dark');
+      if (btn2) btn2.textContent = 'Light Mode';
+    }
+    if (btn2) {
+      btn2.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        btn2.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+      });
+    }
+  </script>
+</body>
+</html>

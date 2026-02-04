@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Урок 2 – Сюжет и раскадровка</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    .example { background:#eef6fc; border-left:4px solid #007acc; padding:15px 20px; margin:20px 0; border-radius:5px; }
+    pre { background:#f5f5f5; padding:10px; border-radius:4px; overflow-x:auto; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+
+    /* Тёмный режим */
+    body.dark { background-color: #121212; color: #e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color: #e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color: #66b3ff; }
+    body.dark p { color: #d0d0d0; }
+    body.dark details, body.dark .example { background: #1f2b3a; border: 1px solid #2c3e55; color: #e5e5e5; }
+    body.dark details[open] { background: #25395a; }
+    body.dark a { color: #ffae62; }
+    body.dark nav .tabs a { color: #66b3ff; }
+    body.dark nav .tabs a.active { background: #004f7c; color: #fff; }
+    body.dark nav .lang a { color: #66b3ff; }
+    body.dark #themeToggle { border-color: #66b3ff; color: #66b3ff; }
+    body.dark .image img { filter: brightness(0.9); }
+    body.dark footer { background: #004f7c; color: #e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_ru.html">Домой</a>
+      <a href="lesson1_ru.html">Урок 1</a>
+      <a href="lesson2_ru.html" class="active">Урок 2</a>
+      <a href="lesson3_ru.html">Урок 3</a>
+      <a href="lesson4_ru.html">Урок 4</a>
+      <a href="lesson5_ru.html">Урок 5</a>
+      <a href="lesson6_ru.html">Урок 6</a>
+    </div>
+    <div class="lang">
+      <a href="../en/lesson2_en.html">EN</a> |
+      <a href="lesson2_ru.html">RU</a> |
+      <a href="../he/lesson2_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Темная тема</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Урок 2: Сюжет и раскадровка</h1>
+    <p>Планируйте фильм как профессионал: продумывайте сюжет, создавайте героев и расписывайте сцены шаг за шагом.</p>
+    <img src="../images/storyboard.png" alt="Иконка раскадровки" class="robot">
+  </header>
+  <div class="container">
+    <h2>2.1 Создание захватывающего сюжета</h2>
+    <p>Лучшие истории отвечают на три вопроса: <strong>Где?</strong> <strong>Кто?</strong> и <strong>Что происходит?</strong> Придумайте место действия (лес, космический корабль или школа), придумайте персонажей с целями и характерами и представьте конфликт или препятствие, которое им придётся преодолеть.</p>
+    <details>
+      <summary>Пример плана сюжета</summary>
+      <p>Люси‑изобретательница живёт в тихом приморском городке. Она мечтает построить летающую машину. Однажды начинается буря, и маяк гаснет. Люси должна успеть завершить своё изобретение, взлететь к маяку и спасти корабли.</p>
+    </details>
+    <h2>2.2 Персонажи и реплики</h2>
+    <p>Именно герои двигают историю вперёд. Дайте им яркую внешность, мотивации и манеру говорить. В анимации можно использовать AI, чтобы создавать неизменный образ персонажей: описывайте их одинаково в каждом запросе.</p>
+    <details>
+      <summary>Сохранение внешности героя</summary>
+      <p>Используйте один и тот же промпт для персонажа во всех изображениях. Например: «Люси, умная 13‑летняя девочка с кучерявыми каштановыми волосами и зелёными глазами, в джинсовом комбинезоне и с очками на лбу, стоит в своей мастерской». Сохраняйте описание и seed (если есть) — так Люси всегда будет выглядеть одинаково.</p>
+    </details>
+    <h2>2.3 Прописывание промптов для сцен</h2>
+    <p>Каждому кадру в раскадровке нужен свой промпт. Укажите персонажа, место, действие и стиль. Не забудьте про настроение и реквизит. Сравнение:</p>
+    <div class="example">
+      <strong>Слабый промпт:</strong>
+      <pre>Девочка что-то строит.</pre>
+      <strong>Лучший промпт:</strong>
+      <pre>Люси, умная 13‑летняя девочка с кучерявыми каштановыми волосами и зелёными глазами, работает над деревянной летающей машиной в своей солнечной мастерской, полной шестерёнок и чертежей. На ней очки и джинсовый комбинезон. Всё выполнено в тёплом акварельном стиле.</pre>
+    </div>
+    <details>
+      <summary>Контрольный список промпта</summary>
+      <ul>
+        <li>Кто в кадре? (имя, возраст, внешность)</li>
+        <li>Где они? (место, время суток)</li>
+        <li>Что они делают? (действие, эмоция)</li>
+        <li>Как это должно выглядеть? (стиль, цвета, настроение)</li>
+      </ul>
+    </details>
+    <h2>2.4 Построение раскадровки</h2>
+    <p>Раскадровка — это визуальный план вашего фильма. Она показывает последовательность сцен и помогает увидеть историю целиком. Можно использовать простые палочки или AI‑изображения для каждой панели.</p>
+    <div class="image">
+      <img src="../images/flow_diagram.png" alt="Диаграмма от идеи до видео">
+      <p><em>Рис. 2. Путь от идеи до готового ролика: идея → раскадровка → кадры → звук → видео.</em></p>
+    </div>
+    <details>
+      <summary>Пример раскадровки</summary>
+      <p>Кадр 1: Люси рисует летающую машину, а за окном летают чайки.<br>
+         Кадр 2: Начинается гроза, волны бьются о пристань.<br>
+         Кадр 3: Маяк мерцает и гаснет.<br>
+         Кадр 4: Люси надевает очки и бежит к машине.<br>
+         Кадр 5: Она взлетает и направляется к маяку.<br>
+         Кадр 6: Она приземляется, зажигает свет и спасает корабли.</p>
+    </details>
+    <h2>2.5 Задание</h2>
+    <ol>
+      <li>Напишите краткое описание сюжета: герой, место и конфликт.</li>
+      <li>Создайте раскадровку на 6–8 кадров. Опишите каждую сцену и, если сможете, нарисуйте или сгенерируйте картинки.</li>
+      <li>Напишите подробный промпт для каждого кадра: объект, контекст, действие, стиль и настроение.</li>
+    </ol>
+    <p>История может быть простой и весёлой. В следующем уроке вы научитесь оживлять свои кадры!</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI‑анимация 14+</p>
+    <p>Ресурсы: скачивайте изображения на <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+</footer>
+  <!-- Скрипт для переключения темы -->
+  <script>
+    const toggleBtnRU2 = document.getElementById('themeToggle');
+    const prefersDarkRU2 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDarkRU2) {
+      document.body.classList.add('dark');
+      if (toggleBtnRU2) toggleBtnRU2.textContent = 'Светлая тема';
+    }
+    if (toggleBtnRU2) {
+      toggleBtnRU2.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggleBtnRU2.textContent = document.body.classList.contains('dark') ? 'Светлая тема' : 'Темная тема';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 – Animation &amp; Motion</title>
+  <style>
+    body { margin:0; font-family:'Segoe UI', Tahoma, sans-serif; background:#f5f8fc; color:#333; line-height:1.6; }
+    a { color:#ff8c42; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    nav { display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.95); padding:10px 20px; box-shadow:0 2px 4px rgba(0,0,0,0.1); position:sticky; top:0; z-index:1000; }
+    nav .tabs a { margin-right:15px; padding:6px 10px; border-radius:4px; color:#004f7c; font-weight:600; }
+    nav .tabs a.active { background:#007acc; color:#fff; }
+    nav .lang a { margin-left:10px; color:#007acc; font-weight:bold; }
+    header { background: linear-gradient(135deg, #4f52ff 0%, #0088cc 50%, #00d4ff 100%); color:#fff; padding:40px 20px; position:relative; overflow:hidden; }
+    header h1 { margin:0; font-size:2.4rem; }
+    header p { margin:10px 0 0; font-size:1.1rem; max-width:600px; }
+    header img.robot { position:absolute; bottom:-10px; right:20px; width:200px; }
+    .container { width:90%; max-width:1000px; margin:0 auto; padding:30px 0; }
+    h2 { color:#007acc; margin-top:30px; font-size:1.8rem; }
+    h3 { color:#007acc; margin-top:25px; font-size:1.4rem; }
+    .example { background:#eef6fc; border-left:4px solid #007acc; padding:15px 20px; margin:20px 0; border-radius:5px; }
+    pre { background:#f5f5f5; padding:10px; border-radius:4px; overflow-x:auto; }
+    details { background:#fff; border-radius:6px; box-shadow:0 2px 4px rgba(0,0,0,0.05); margin:15px 0; padding:15px 20px; }
+    details summary { font-weight:bold; cursor:pointer; color:#007acc; outline:none; }
+    details[open] { background:#f0f7ff; }
+    details summary::-webkit-details-marker { display:none; }
+    .image { text-align:center; margin:20px 0; }
+    .image img { max-width:100%; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); }
+    footer { margin-top:60px; padding:20px 0; background:#007acc; color:#fff; text-align:center; }
+    /* Dark mode overrides */
+    body.dark { background-color:#121212; color:#e5e5e5; }
+    body.dark nav { background: rgba(20,20,20,0.95); }
+    body.dark header { background: linear-gradient(135deg, #252c4a 0%, #173452 50%, #1a5378 100%); color:#e5e5e5; }
+    body.dark h1, body.dark h2, body.dark h3 { color:#66b3ff; }
+    body.dark p { color:#d0d0d0; }
+    body.dark .example { background:#17223b; border-left-color:#66b3ff; color:#e5e5e5; }
+    body.dark details, body.dark .image, body.dark .container { background:inherit; color:inherit; }
+    body.dark nav .tabs a { color:#66b3ff; }
+    body.dark nav .tabs a.active { background:#004f7c; color:#fff; }
+    body.dark nav .lang a { color:#66b3ff; }
+    body.dark #themeToggle { border-color:#66b3ff; color:#66b3ff; }
+    body.dark footer { background:#004f7c; color:#e5e5e5; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="tabs">
+      <a href="../index_en.html">Home</a>
+      <a href="lesson1_en.html">Lesson 1</a>
+      <a href="lesson2_en.html">Lesson 2</a>
+      <a href="lesson3_en.html" class="active">Lesson 3</a>
+      <a href="lesson4_en.html">Lesson 4</a>
+      <a href="lesson5_en.html">Lesson 5</a>
+      <a href="lesson6_en.html">Lesson 6</a>
+    </div>
+    <div class="lang">
+      <a href="lesson3_en.html">EN</a> |
+      <a href="../ru/lesson3_ru.html">RU</a> |
+      <a href="../he/lesson3_he.html">HE</a>
+      <button id="themeToggle" style="margin-left:15px; padding:6px 10px; border:1px solid #007acc; border-radius:5px; background:none; color:#007acc; font-weight:600; cursor:pointer;">Dark Mode</button>
+    </div>
+  </nav>
+  <header>
+    <h1>Lesson 3: Animation &amp; Motion</h1>
+    <p>Breathe life into your images. Learn how to animate characters, create smooth transitions and control the camera.</p>
+    <img src="../images/motion.png" alt="Motion icon" class="robot">
+  </header>
+  <div class="container">
+    <h2>3.1 Finalizing Your Storyboard</h2>
+    <p>Before animating, make sure your storyboard is complete. Double‑check the sequence of events and adjust any shots that don’t flow well. It’s much easier to fix a drawing than a moving clip!</p>
+    <h2>3.2 Bringing Characters to Life</h2>
+    <p>To animate your scenes, you can use AI video tools like Grok or Kling. These models take a static image and create motion – making characters blink, walk or fly【359591517461072†L221-L285】【805035439567289†L154-L160】.</p>
+    <div class="image">
+      <img src="../images/motion_example.png" alt="Static to motion diagram">
+      <caption><em>Figure 1. From static to dynamic: start with a still image, then add motion and transitions.</em></caption>
+    </div>
+    <details>
+      <summary>Tips for Natural Movement</summary>
+      <ul>
+        <li>Keep movements simple: small eye blinks, gentle turns and subtle gestures.</li>
+        <li>Use loops: small repeating motions like a bird flapping create realism.</li>
+        <li>Think about physics: heavier objects move slower and have momentum.</li>
+      </ul>
+    </details>
+    <h2>3.3 Transitions &amp; Camera Moves</h2>
+    <p>Good editing makes your story easy to follow. Use transitions to move from one scene to the next:</p>
+    <ul>
+      <li><strong>Cut:</strong> Switch instantly between scenes to create energy.</li>
+      <li><strong>Dissolve:</strong> Blend one scene into another for a gentle change.</li>
+      <li><strong>Pan &amp; Zoom:</strong> Move the “camera” left, right or closer to draw attention.</li>
+      <li><strong>Slide:</strong> Slide new images over the old to suggest movement across space.</li>
+    </ul>
+    <details>
+      <summary>Camera Move Example</summary>
+      <p>Imagine Lucy launching her flying machine. Start with a wide shot of the workshop. Then slowly pan up and follow her into the sky. Zoom in on her determined face as she fights the wind. These moves add drama and keep viewers engaged.</p>
+    </details>
+    <h2>3.4 Upscaling &amp; Enhancements</h2>
+    <p>AI tools can improve image quality before animation. Use upscale options or run your images through programs like Canva’s Magic Resize or CapCut’s enhancers to make them sharp. Remember, perfect quality isn’t everything. Focus on telling your story and adjust visuals only as needed.</p>
+    <h2>3.5 Preparing Clips for Editing</h2>
+    <p>Export your animated scenes as short video clips. Name them in order (e.g., scene01.mp4, scene02.mp4) and keep them in one folder. In the next lesson you’ll add voices and sound effects.</p>
+    <h2>3.6 Assignment</h2>
+    <ol>
+      <li>Animate each panel of your storyboard using your chosen tool. Start with simple motions.</li>
+      <li>Add at least one transition between scenes (cut, dissolve or slide).</li>
+      <li>Export your clips and organize them for the next step.</li>
+    </ol>
+    <p>Great job! You’re starting to see your story come alive.</p>
+  </div>
+  <footer>
+    <p>&copy; 2026 AI Animation 14+</p>
+    <p>Resources: get free images at <a href="https://referral.freepik.com/mQLgctx" target="_blank" rel="nofollow">Freepik</a>.</p>
+  </footer>
+  <!-- Dark mode toggle script -->
+  <script>
+    const btn3 = document.getElementById('themeToggle');
+    const prefersDark3 = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark3) {
+      document.body.classList.add('dark');
+      if (btn3) btn3.textContent = 'Light Mode';
+    }
+    if (btn3) {
+      btn3.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        btn3.textContent = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
+      });
+    }
+  </script>
+</body>
+</html>
